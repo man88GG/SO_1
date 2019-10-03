@@ -17,3 +17,6 @@ C:\Users\Tefa\Desktop\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csprojRe
 C:\Users\Tefa\Desktop\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Form1.resources
 C:\Users\Tefa\Desktop\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Properties.Resources.resources
 C:\Users\Tefa\Desktop\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.GenerateResource.Cache
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.exe.config
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.exe
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.pdb
