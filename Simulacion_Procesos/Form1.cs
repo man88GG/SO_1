@@ -34,10 +34,11 @@ namespace Simulacion_Procesos
             //creacion columnas con sus respectivos nombres
             dgv_Proceso.Columns[0].Name = "Num. Procesos";
             dgv_Proceso.Columns[1].Name = "Procesos";
-            dgv_Proceso.Columns[2].Name = "ID";
-            dgv_Proceso.Columns[3].Name = "Memoria Fisica";
-            dgv_Proceso.Columns[4].Name = "Memoria Virtual";
-            dgv_Proceso.Columns[5].Name = "CPU";
+            dgv_Proceso.Columns[2].Name = "Prioridad Proceso";
+            dgv_Proceso.Columns[3].Name = "ID";
+            dgv_Proceso.Columns[4].Name = "Memoria Fisica";
+            dgv_Proceso.Columns[5].Name = "Memoria Virtual";
+           
 
             //Propiedad para autoajustar el tamaño de las celdas segun su contenido
             dgv_Proceso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -53,8 +54,8 @@ namespace Simulacion_Procesos
             foreach (Process Proc_Proceso in Process.GetProcesses())
             {
                 //Ingreso de los datos en el datagrid
-                dgv_Proceso.Rows.Add(Int_Cant_Proc, Proc_Proceso.ProcessName, Proc_Proceso.Id, Proc_Proceso.WorkingSet64,
-                    Proc_Proceso.VirtualMemorySize64, Proc_Proceso.SessionId);
+                dgv_Proceso.Rows.Add(Int_Cant_Proc, Proc_Proceso.ProcessName, Proc_Proceso.BasePriority, Proc_Proceso.Id, Proc_Proceso.WorkingSet64,
+                    Proc_Proceso.VirtualMemorySize64);
                 //aumento en 1 de la variable
                 Int_Cant_Proc += 1;
             }
@@ -94,11 +95,11 @@ namespace Simulacion_Procesos
         }
 
 
-
+        //Boton Actualizar
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
 
-
+            //Llamado al proceso para actualizar la tabla
             ActualizarTabla(); 
         }
 
@@ -115,7 +116,7 @@ namespace Simulacion_Procesos
                     if (proceso.ProcessName == Str_Obt_Proc)
                     {
                         proceso.Kill();//Se elimina el proceso
-                        ActualizarTabla();
+                        ActualizarTabla();//Se llama al proceso para actualizar la tabla automaticamente
                     }
                 }
 
@@ -127,15 +128,9 @@ namespace Simulacion_Procesos
             }
         }
 
-        private void dgv_Proceso_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+      
 
-        }
-
-        private void BtnBorrar_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void dgv_Proceso_MouseClick_1(object sender, MouseEventArgs e)
         {

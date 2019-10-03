@@ -44,10 +44,10 @@
             this.dgv_Proceso = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCerrar)).BeginInit();
@@ -202,10 +202,10 @@
             this.dgv_Proceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column6,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Column5});
             this.dgv_Proceso.Location = new System.Drawing.Point(313, 66);
             this.dgv_Proceso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Proceso.Name = "dgv_Proceso";
@@ -230,6 +230,12 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Prioridad Proceso";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // Column3
             // 
             this.Column3.HeaderText = "ID";
@@ -247,12 +253,6 @@
             this.Column5.HeaderText = "Memoria Virtual";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CPU";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // Form1
             // 
@@ -294,10 +294,10 @@
         private System.Windows.Forms.DataGridView dgv_Proceso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 
