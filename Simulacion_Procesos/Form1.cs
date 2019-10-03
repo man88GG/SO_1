@@ -102,11 +102,7 @@ namespace Simulacion_Procesos
             ActualizarTabla(); 
         }
 
-        private void dgv_Proceso_MouseClick(object sender, MouseEventArgs e)
-        {
-            //La variable obtiene el Nombre del Proceso de la Tabla al hacerle clic
-            Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
-        }
+   
 
         //Boton Detener Proceso
         private void Btn_Detener_Click(object sender, EventArgs e)
@@ -119,6 +115,7 @@ namespace Simulacion_Procesos
                     if (proceso.ProcessName == Str_Obt_Proc)
                     {
                         proceso.Kill();//Se elimina el proceso
+                        ActualizarTabla();
                     }
                 }
 
@@ -133,6 +130,17 @@ namespace Simulacion_Procesos
         private void dgv_Proceso_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_Proceso_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            //La variable obtiene el Nombre del Proceso de la Tabla al hacerle clic
+            Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }
