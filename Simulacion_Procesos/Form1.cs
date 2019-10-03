@@ -107,5 +107,29 @@ namespace Simulacion_Procesos
             //La variable obtiene el Nombre del Proceso de la Tabla al hacerle clic
             Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
         }
+
+        private void Btn_Detener_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                foreach(Process proceso in Process.GetProcesses())
+                {
+                    if (proceso.ProcessName == Str_Obt_Proc)
+                    {
+                        proceso.Kill();
+                    }
+                }
+
+            }
+            catch (Exception x) 
+            {
+                MessageBox.Show("No se ha seleccionado ningun proceso para detener." + x, "Error al Detener Proceso", MessageBoxButtons.OK);
+            }
+        }
+
+        private void dgv_Proceso_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
