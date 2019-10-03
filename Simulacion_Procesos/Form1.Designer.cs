@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.IconMin = new System.Windows.Forms.PictureBox();
             this.IconCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.TxtActualizar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lst_CPU = new System.Windows.Forms.ListBox();
-            this.lst_memoriavirtual = new System.Windows.Forms.ListBox();
-            this.lst_memoriafisica = new System.Windows.Forms.ListBox();
-            this.lst_id = new System.Windows.Forms.ListBox();
-            this.lstProcesses = new System.Windows.Forms.ListBox();
+            this.dgv_Proceso = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Contador = new System.Windows.Forms.Label();
+            this.BtnBorrar = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCerrar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Proceso)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,7 +62,7 @@
             this.panel1.Controls.Add(this.IconCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1333, 49);
             this.panel1.TabIndex = 0;
@@ -86,7 +87,7 @@
             this.IconMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconMin.Image = ((System.Drawing.Image)(resources.GetObject("IconMin.Image")));
             this.IconMin.Location = new System.Drawing.Point(1225, 4);
-            this.IconMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IconMin.Margin = new System.Windows.Forms.Padding(4);
             this.IconMin.Name = "IconMin";
             this.IconMin.Size = new System.Drawing.Size(48, 39);
             this.IconMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +102,7 @@
             this.IconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("IconCerrar.Image")));
             this.IconCerrar.Location = new System.Drawing.Point(1281, 4);
-            this.IconCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IconCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.IconCerrar.Name = "IconCerrar";
             this.IconCerrar.Size = new System.Drawing.Size(48, 39);
             this.IconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,32 +113,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.BtnBorrar);
+            this.panel2.Controls.Add(this.BtnActualizar);
+            this.panel2.Controls.Add(this.lbl_Contador);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.TxtActualizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 49);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(296, 566);
             this.panel2.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 70);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 74);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "BORRAR PROCESO";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -149,150 +134,110 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 151);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 74);
             this.button1.TabIndex = 1;
             this.button1.Text = "OTRA COSA XD";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // TxtActualizar
+            // dgv_Proceso
             // 
-            this.TxtActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtActualizar.FlatAppearance.BorderSize = 0;
-            this.TxtActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.TxtActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TxtActualizar.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtActualizar.ForeColor = System.Drawing.Color.Black;
-            this.TxtActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TxtActualizar.Location = new System.Drawing.Point(0, 0);
-            this.TxtActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtActualizar.Name = "TxtActualizar";
-            this.TxtActualizar.Size = new System.Drawing.Size(296, 74);
-            this.TxtActualizar.TabIndex = 0;
-            this.TxtActualizar.Text = "ACTUALIZAR";
-            this.TxtActualizar.UseVisualStyleBackColor = true;
-            this.TxtActualizar.Click += new System.EventHandler(this.TxtActualizar_Click);
+            this.dgv_Proceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Proceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgv_Proceso.Location = new System.Drawing.Point(446, 93);
+            this.dgv_Proceso.Name = "dgv_Proceso";
+            this.dgv_Proceso.RowTemplate.Height = 24;
+            this.dgv_Proceso.Size = new System.Drawing.Size(639, 388);
+            this.dgv_Proceso.TabIndex = 18;
+            this.dgv_Proceso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_Proceso_MouseClick);
             // 
-            // label6
+            // Column1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1192, 73);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 17);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "CPU:";
+            this.Column1.HeaderText = "Num Proceso";
+            this.Column1.Name = "Column1";
             // 
-            // label5
+            // Column2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(943, 73);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 17);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Memoria Virtual:";
+            this.Column2.HeaderText = "Procesos";
+            this.Column2.Name = "Column2";
             // 
-            // label4
+            // Column3
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(744, 73);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Memoria fisica :";
+            this.Column3.HeaderText = "ID";
+            this.Column3.Name = "Column3";
             // 
-            // label3
+            // Column4
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(573, 73);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 17);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "ID:";
+            this.Column4.HeaderText = "Memoria Fisica";
+            this.Column4.Name = "Column4";
             // 
-            // label2
+            // Column5
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(368, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Procesos:";
+            this.Column5.HeaderText = "Memoria Virtual";
+            this.Column5.Name = "Column5";
             // 
-            // lst_CPU
+            // Column6
             // 
-            this.lst_CPU.FormattingEnabled = true;
-            this.lst_CPU.HorizontalScrollbar = true;
-            this.lst_CPU.ItemHeight = 16;
-            this.lst_CPU.Location = new System.Drawing.Point(1131, 100);
-            this.lst_CPU.Margin = new System.Windows.Forms.Padding(4);
-            this.lst_CPU.Name = "lst_CPU";
-            this.lst_CPU.ScrollAlwaysVisible = true;
-            this.lst_CPU.Size = new System.Drawing.Size(155, 404);
-            this.lst_CPU.TabIndex = 20;
+            this.Column6.HeaderText = "CPU";
+            this.Column6.Name = "Column6";
             // 
-            // lst_memoriavirtual
+            // timer1
             // 
-            this.lst_memoriavirtual.FormattingEnabled = true;
-            this.lst_memoriavirtual.HorizontalScrollbar = true;
-            this.lst_memoriavirtual.ItemHeight = 16;
-            this.lst_memoriavirtual.Location = new System.Drawing.Point(920, 100);
-            this.lst_memoriavirtual.Margin = new System.Windows.Forms.Padding(4);
-            this.lst_memoriavirtual.Name = "lst_memoriavirtual";
-            this.lst_memoriavirtual.ScrollAlwaysVisible = true;
-            this.lst_memoriavirtual.Size = new System.Drawing.Size(155, 404);
-            this.lst_memoriavirtual.TabIndex = 19;
+            this.timer1.Interval = 30000;
             // 
-            // lst_memoriafisica
+            // lbl_Contador
             // 
-            this.lst_memoriafisica.FormattingEnabled = true;
-            this.lst_memoriafisica.HorizontalScrollbar = true;
-            this.lst_memoriafisica.ItemHeight = 16;
-            this.lst_memoriafisica.Location = new System.Drawing.Point(720, 100);
-            this.lst_memoriafisica.Margin = new System.Windows.Forms.Padding(4);
-            this.lst_memoriafisica.Name = "lst_memoriafisica";
-            this.lst_memoriafisica.ScrollAlwaysVisible = true;
-            this.lst_memoriafisica.Size = new System.Drawing.Size(155, 404);
-            this.lst_memoriafisica.TabIndex = 18;
+            this.lbl_Contador.AutoSize = true;
+            this.lbl_Contador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Contador.Font = new System.Drawing.Font("Verdana", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contador.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_Contador.Location = new System.Drawing.Point(18, 491);
+            this.lbl_Contador.Name = "lbl_Contador";
+            this.lbl_Contador.Size = new System.Drawing.Size(155, 17);
+            this.lbl_Contador.TabIndex = 5;
+            this.lbl_Contador.Text = "Contador Procesos";
             // 
-            // lst_id
+            // BtnBorrar
             // 
-            this.lst_id.FormattingEnabled = true;
-            this.lst_id.HorizontalScrollbar = true;
-            this.lst_id.ItemHeight = 16;
-            this.lst_id.Location = new System.Drawing.Point(513, 100);
-            this.lst_id.Margin = new System.Windows.Forms.Padding(4);
-            this.lst_id.Name = "lst_id";
-            this.lst_id.ScrollAlwaysVisible = true;
-            this.lst_id.Size = new System.Drawing.Size(155, 404);
-            this.lst_id.TabIndex = 17;
+            this.BtnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBorrar.FlatAppearance.BorderSize = 0;
+            this.BtnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBorrar.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.ForeColor = System.Drawing.Color.Black;
+            this.BtnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBorrar.Location = new System.Drawing.Point(-4, 87);
+            this.BtnBorrar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnBorrar.Name = "BtnBorrar";
+            this.BtnBorrar.Size = new System.Drawing.Size(296, 74);
+            this.BtnBorrar.TabIndex = 7;
+            this.BtnBorrar.Text = "BORRAR PROCESO";
+            this.BtnBorrar.UseVisualStyleBackColor = true;
             // 
-            // lstProcesses
+            // BtnActualizar
             // 
-            this.lstProcesses.FormattingEnabled = true;
-            this.lstProcesses.HorizontalScrollbar = true;
-            this.lstProcesses.ItemHeight = 16;
-            this.lstProcesses.Location = new System.Drawing.Point(327, 100);
-            this.lstProcesses.Margin = new System.Windows.Forms.Padding(4);
-            this.lstProcesses.Name = "lstProcesses";
-            this.lstProcesses.ScrollAlwaysVisible = true;
-            this.lstProcesses.Size = new System.Drawing.Size(155, 404);
-            this.lstProcesses.TabIndex = 16;
+            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.Black;
+            this.BtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnActualizar.Location = new System.Drawing.Point(-4, 17);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(296, 74);
+            this.BtnActualizar.TabIndex = 6;
+            this.BtnActualizar.Text = "ACTUALIZAR";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // Form1
             // 
@@ -300,20 +245,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1333, 615);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lst_CPU);
-            this.Controls.Add(this.lst_memoriavirtual);
-            this.Controls.Add(this.lst_memoriafisica);
-            this.Controls.Add(this.lst_id);
-            this.Controls.Add(this.lstProcesses);
+            this.Controls.Add(this.dgv_Proceso);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -322,8 +258,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.IconMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Proceso)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -333,20 +270,19 @@
         private System.Windows.Forms.PictureBox IconMin;
         private System.Windows.Forms.PictureBox IconCerrar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button TxtActualizar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lst_CPU;
-        private System.Windows.Forms.ListBox lst_memoriavirtual;
-        private System.Windows.Forms.ListBox lst_memoriafisica;
-        private System.Windows.Forms.ListBox lst_id;
-        private System.Windows.Forms.ListBox lstProcesses;
+        private System.Windows.Forms.Button BtnBorrar;
+        private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.Label lbl_Contador;
+        private System.Windows.Forms.DataGridView dgv_Proceso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

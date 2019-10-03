@@ -16,13 +16,54 @@ namespace Simulacion_Procesos
 {
     public partial class Form1 : Form
     {
+        //Declaracion de variable string para obtener el nombre del proceso en la tabla para su eliminacion
+        string Str_Obt_Proc;
         public Form1()
         {
             InitializeComponent();
             //Activacion del timer que actualizara la tabla
+            ActualizarTabla();
             timer1.Enabled = true;
             
         }
+
+        private void ActualizarTabla()
+        {
+            //limpieza del datagrid
+            dgv_Proceso.Rows.Clear();
+            //creacion columnas con sus respectivos nombres
+            dgv_Proceso.Columns[0].Name = "Num. Procesos";
+            dgv_Proceso.Columns[1].Name = "Procesos";
+            dgv_Proceso.Columns[2].Name = "ID";
+            dgv_Proceso.Columns[3].Name = "Memoria Fisica";
+            dgv_Proceso.Columns[4].Name = "Memoria Virtual";
+            dgv_Proceso.Columns[5].Name = "CPU";
+
+            //Propiedad para autoajustar el tamaño de las celdas segun su contenido
+            dgv_Proceso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //Propiedad para que el usuario seleccione solamente filas en la tabla y no celdas sueltas
+            dgv_Proceso.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //Propiedad para que el usuario no pueda seleccionar mas de una fila
+            dgv_Proceso.MultiSelect = false;
+
+            //Declaracion de la variable que sera un contador para el total de procesos
+            int Int_Cant_Proc = 1;
+
+
+            foreach (Process Proc_Proceso in Process.GetProcesses())
+            {
+                //Ingreso de los datos en el datagrid
+                dgv_Proceso.Rows.Add(Int_Cant_Proc, Proc_Proceso.ProcessName, Proc_Proceso.Id, Proc_Proceso.WorkingSet64,
+                    Proc_Proceso.VirtualMemorySize64, Proc_Proceso.SessionId);
+                //aumento en 1 de la variable
+                Int_Cant_Proc += 1;
+            }
+            //El label muestra la cantidad de procesos actuales
+            lbl_Contador.Text = "Procesos Actuales: " + (Int_Cant_Proc - 1);    //  cant de procesos   
+
+
+        } //fin metodo ActualizarTabla
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -52,27 +93,19 @@ namespace Simulacion_Procesos
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void TxtActualizar_Click(object sender, EventArgs e)
+
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
         {
-           
 
-            lstProcesses.Items.Clear();
-            lst_id.Items.Clear();
-            lst_memoriafisica.Items.Clear();
-            lst_memoriavirtual.Items.Clear();
-            lst_CPU.Items.Clear();
 
-            int id = 1;
-            foreach (Process p in Process.GetProcesses())
-            {
-                lstProcesses.Items.Add(id + ":" + p.ProcessName); // nombre del proceso
-                lst_id.Items.Add(id + ": " + p.Id);// id del proceso
-                lst_memoriafisica.Items.Add(id + ": " + p.WorkingSet64);// RAM del proceso
-                lst_memoriavirtual.Items.Add(id + ": " + p.VirtualMemorySize64); // MEmoria virtual del proceso
-                lst_CPU.Items.Add(id + ": " + p.SessionId); // CPU que usa el proceso
+            ActualizarTabla(); 
+        }
 
-            }
-
+        private void dgv_Proceso_MouseClick(object sender, MouseEventArgs e)
+        {
+            //La variable obtiene el Nombre del Proceso de la Tabla al hacerle clic
+            Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }
