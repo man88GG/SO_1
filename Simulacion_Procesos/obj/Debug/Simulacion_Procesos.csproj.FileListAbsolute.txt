@@ -35,3 +35,6 @@ C:\Users\User\Documents\Universidad Agus UMG\6to Ciclo\Sistemas Operativos\Simul
 C:\Users\User\Documents\Universidad Agus UMG\6to Ciclo\Sistemas Operativos\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Form1.resources
 C:\Users\User\Documents\Universidad Agus UMG\6to Ciclo\Sistemas Operativos\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Properties.Resources.resources
 C:\Users\User\Documents\Universidad Agus UMG\6to Ciclo\Sistemas Operativos\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.GenerateResource.Cache
+C:\Users\User\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.exe.config
+C:\Users\User\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.exe
+C:\Users\User\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.pdb

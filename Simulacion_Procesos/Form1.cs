@@ -108,19 +108,22 @@ namespace Simulacion_Procesos
             Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
         }
 
+        //Boton Detener Proceso
         private void Btn_Detener_Click(object sender, EventArgs e)
         {
             try 
             {
+                //Por cada proceso que haya se comparara su nombre con el nombre del proceso que se desea eliminar.
                 foreach(Process proceso in Process.GetProcesses())
                 {
                     if (proceso.ProcessName == Str_Obt_Proc)
                     {
-                        proceso.Kill();
+                        proceso.Kill();//Se elimina el proceso
                     }
                 }
 
             }
+                //En caso no se seleccione un proceso mostrara el siguiente mensaje.
             catch (Exception x) 
             {
                 MessageBox.Show("No se ha seleccionado ningun proceso para detener." + x, "Error al Detener Proceso", MessageBoxButtons.OK);
