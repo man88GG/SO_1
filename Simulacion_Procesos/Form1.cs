@@ -14,7 +14,7 @@ using System.Diagnostics;
 
 namespace Simulacion_Procesos
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         //Declaracion de variable string para obtener el nombre del proceso en la tabla para su eliminacion
         string Str_Obt_Proc;
@@ -66,38 +66,17 @@ namespace Simulacion_Procesos
         } //fin metodo ActualizarTabla
 
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        private void IconCerrar_Click(object sender, EventArgs e){
-            Application.Exit();
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e){
-            if (this.WindowState == FormWindowState.Normal){
-                this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-                this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            }else{
-                this.WindowState = FormWindowState.Normal;
-            }
-
-        }
-
-        private void Panel1_MouseDown(object sender, MouseEventArgs e){
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void IconMin_Click(object sender, EventArgs e){
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-
         //Boton Actualizar
-        private void BtnActualizar_Click(object sender, EventArgs e)
-        {
+        private void BtnActualizar_Click(object sender, EventArgs e){
+            //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
+            LblNombreCPU.Visible = false;
+            LblNombreRam.Visible = false;
+            ProgressBarCPU.Visible = false;
+            ProgressBarRAM.Visible = false;
+            LblPorCPU.Visible = false;
+            LblPorRAM.Visible = false;
+            Grafico.Visible = false;
+            dgv_Proceso.Visible = true;
 
             //Llamado al proceso para actualizar la tabla
             ActualizarTabla(); 
@@ -106,8 +85,17 @@ namespace Simulacion_Procesos
    
 
         //Boton Detener Proceso
-        private void Btn_Detener_Click(object sender, EventArgs e)
-        {
+        private void Btn_Detener_Click(object sender, EventArgs e){
+            //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
+            LblNombreCPU.Visible = false;
+            LblNombreRam.Visible = false;
+            ProgressBarCPU.Visible = false;
+            ProgressBarRAM.Visible = false;
+            LblPorCPU.Visible = false;
+            LblPorRAM.Visible = false;
+            Grafico.Visible = false;
+            dgv_Proceso.Visible = true;
+
             try 
             {
                 //Por cada proceso que haya se comparara su nombre con el nombre del proceso que se desea eliminar.
@@ -128,14 +116,43 @@ namespace Simulacion_Procesos
             }
         }
 
-      
-
-     
 
         private void dgv_Proceso_MouseClick_1(object sender, MouseEventArgs e)
         {
             //La variable obtiene el Nombre del Proceso de la Tabla al hacerle clic
             Str_Obt_Proc = dgv_Proceso.SelectedRows[0].Cells[1].Value.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e){
+            //Evento que maneja el contador de rendimiento de la RAM y del CPU
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e){
+            //Asignamos un float a un PerformanceCounter que ya tiene asignado el contador de rendimiento de la RAM y del CPU
+            float fCPU = pCPU.NextValue();
+            float fRAM = pRAM.NextValue();
+            //Agregamos los Valores a la Barra de progeso respectivamente
+            ProgressBarCPU.Value = (int)fCPU;
+            ProgressBarRAM.Value = (int)fRAM;
+            //Damos el formato de porcentaje correspondiente al label de porcentaje con lo float
+            LblPorCPU.Text = string.Format("{0:0.00}%", fCPU);
+            LblPorRAM.Text = string.Format("{0:0.00}%", fRAM);
+            //Agregamos los valores de Y que se usaran para mostrarlos en grafica
+            Grafico.Series["CPU"].Points.AddY(fCPU);
+            Grafico.Series["RAM"].Points.AddY(fRAM);
+        }
+
+        private void Button1_Click(object sender, EventArgs e){
+            //Ocultamos el Dgv de Procesos y mostramos todos los objetos para los gráficos
+            LblNombreCPU.Visible = true;
+            LblNombreRam.Visible = true;
+            ProgressBarCPU.Visible = true;
+            ProgressBarRAM.Visible = true;
+            LblPorCPU.Visible = true;
+            LblPorRAM.Visible = true;
+            Grafico.Visible = true;
+            dgv_Proceso.Visible = false;
         }
     }
 }

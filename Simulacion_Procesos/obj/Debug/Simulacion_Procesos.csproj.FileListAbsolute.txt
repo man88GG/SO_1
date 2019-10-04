@@ -38,3 +38,17 @@ C:\Users\User\Documents\Universidad Agus UMG\6to Ciclo\Sistemas Operativos\Simul
 C:\Users\User\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.exe.config
 C:\Users\User\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.exe
 C:\Users\User\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.pdb
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.exe.config
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.exe
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\Simulacion_Procesos.pdb
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csprojAssemblyReference.cache
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Form1.resources
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.Properties.Resources.resources
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.GenerateResource.cache
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.CoreCompileInputs.cache
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.exe
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.pdb
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Design.dll
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.dll
+C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.CopyComplete
