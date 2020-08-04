@@ -52,3 +52,6 @@ C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Design.dll
 C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.dll
 C:\Users\stmar\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\stmar\SO_1\Simulacion_Procesos\obj\Debug\Simulacion_Procesos.csproj.CopyComplete
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Design.dll
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.dll
+C:\Users\TheVolts\SO_1\Simulacion_Procesos\bin\Debug\MetroFramework.Fonts.dll

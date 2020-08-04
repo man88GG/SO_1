@@ -127,6 +127,7 @@ namespace Simulacion_Procesos
             //Evento que maneja el contador de rendimiento de la RAM y del CPU
             timer.Start();
         }
+        
 
         private void Timer_Tick(object sender, EventArgs e){
             //Asignamos un float a un PerformanceCounter que ya tiene asignado el contador de rendimiento de la RAM y del CPU
@@ -153,6 +154,11 @@ namespace Simulacion_Procesos
             LblPorRAM.Visible = true;
             Grafico.Visible = true;
             dgv_Proceso.Visible = false;
+        }
+
+        private void Grafico_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

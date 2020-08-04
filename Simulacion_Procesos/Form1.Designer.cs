@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Detener = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
@@ -73,9 +73,10 @@
             this.panel2.Controls.Add(this.BtnGrafica);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(20, 60);
+            this.panel2.Location = new System.Drawing.Point(27, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 344);
+            this.panel2.Size = new System.Drawing.Size(296, 423);
             this.panel2.TabIndex = 1;
             // 
             // Btn_Detener
@@ -88,9 +89,10 @@
             this.Btn_Detener.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Detener.ForeColor = System.Drawing.Color.White;
             this.Btn_Detener.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Detener.Location = new System.Drawing.Point(0, 131);
+            this.Btn_Detener.Location = new System.Drawing.Point(0, 161);
+            this.Btn_Detener.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Detener.Name = "Btn_Detener";
-            this.Btn_Detener.Size = new System.Drawing.Size(222, 60);
+            this.Btn_Detener.Size = new System.Drawing.Size(296, 74);
             this.Btn_Detener.TabIndex = 8;
             this.Btn_Detener.Text = "Detener Proceso";
             this.Btn_Detener.UseVisualStyleBackColor = false;
@@ -106,9 +108,10 @@
             this.BtnActualizar.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
             this.BtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnActualizar.Location = new System.Drawing.Point(0, 64);
+            this.BtnActualizar.Location = new System.Drawing.Point(0, 79);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(222, 60);
+            this.BtnActualizar.Size = new System.Drawing.Size(296, 74);
             this.BtnActualizar.TabIndex = 6;
             this.BtnActualizar.Text = "Actualizar Tabla";
             this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -120,10 +123,9 @@
             this.lbl_Contador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Contador.Font = new System.Drawing.Font("Verdana", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Contador.ForeColor = System.Drawing.Color.White;
-            this.lbl_Contador.Location = new System.Drawing.Point(15, 297);
-            this.lbl_Contador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Contador.Location = new System.Drawing.Point(20, 366);
             this.lbl_Contador.Name = "lbl_Contador";
-            this.lbl_Contador.Size = new System.Drawing.Size(127, 13);
+            this.lbl_Contador.Size = new System.Drawing.Size(155, 17);
             this.lbl_Contador.TabIndex = 5;
             this.lbl_Contador.Text = "Contador Procesos";
             // 
@@ -137,9 +139,10 @@
             this.BtnGrafica.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGrafica.ForeColor = System.Drawing.Color.White;
             this.BtnGrafica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGrafica.Location = new System.Drawing.Point(0, 197);
+            this.BtnGrafica.Location = new System.Drawing.Point(0, 242);
+            this.BtnGrafica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGrafica.Name = "BtnGrafica";
-            this.BtnGrafica.Size = new System.Drawing.Size(222, 60);
+            this.BtnGrafica.Size = new System.Drawing.Size(296, 74);
             this.BtnGrafica.TabIndex = 1;
             this.BtnGrafica.Text = "Gráfica CPU y RAM";
             this.BtnGrafica.UseVisualStyleBackColor = false;
@@ -162,15 +165,15 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgv_Proceso.Location = new System.Drawing.Point(247, 62);
-            this.dgv_Proceso.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Proceso.Location = new System.Drawing.Point(329, 76);
+            this.dgv_Proceso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Proceso.Name = "dgv_Proceso";
             this.dgv_Proceso.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Proceso.RowTemplate.Height = 24;
-            this.dgv_Proceso.Size = new System.Drawing.Size(708, 342);
+            this.dgv_Proceso.Size = new System.Drawing.Size(944, 421);
             this.dgv_Proceso.TabIndex = 19;
             this.dgv_Proceso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_Proceso_MouseClick_1);
             // 
@@ -229,9 +232,10 @@
             // LblNombreCPU
             // 
             this.LblNombreCPU.AutoSize = true;
-            this.LblNombreCPU.Location = new System.Drawing.Point(287, 103);
+            this.LblNombreCPU.Location = new System.Drawing.Point(383, 127);
+            this.LblNombreCPU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreCPU.Name = "LblNombreCPU";
-            this.LblNombreCPU.Size = new System.Drawing.Size(35, 19);
+            this.LblNombreCPU.Size = new System.Drawing.Size(36, 20);
             this.LblNombreCPU.TabIndex = 20;
             this.LblNombreCPU.Text = "CPU";
             this.LblNombreCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -239,18 +243,20 @@
             // 
             // ProgressBarCPU
             // 
-            this.ProgressBarCPU.Location = new System.Drawing.Point(356, 99);
+            this.ProgressBarCPU.Location = new System.Drawing.Point(475, 122);
+            this.ProgressBarCPU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProgressBarCPU.Name = "ProgressBarCPU";
-            this.ProgressBarCPU.Size = new System.Drawing.Size(416, 23);
+            this.ProgressBarCPU.Size = new System.Drawing.Size(555, 28);
             this.ProgressBarCPU.TabIndex = 21;
             this.ProgressBarCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ProgressBarCPU.Visible = false;
             // 
             // ProgressBarRAM
             // 
-            this.ProgressBarRAM.Location = new System.Drawing.Point(356, 139);
+            this.ProgressBarRAM.Location = new System.Drawing.Point(475, 171);
+            this.ProgressBarRAM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProgressBarRAM.Name = "ProgressBarRAM";
-            this.ProgressBarRAM.Size = new System.Drawing.Size(416, 23);
+            this.ProgressBarRAM.Size = new System.Drawing.Size(555, 28);
             this.ProgressBarRAM.TabIndex = 23;
             this.ProgressBarRAM.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ProgressBarRAM.Visible = false;
@@ -258,9 +264,10 @@
             // LblNombreRam
             // 
             this.LblNombreRam.AutoSize = true;
-            this.LblNombreRam.Location = new System.Drawing.Point(287, 143);
+            this.LblNombreRam.Location = new System.Drawing.Point(383, 176);
+            this.LblNombreRam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreRam.Name = "LblNombreRam";
-            this.LblNombreRam.Size = new System.Drawing.Size(38, 19);
+            this.LblNombreRam.Size = new System.Drawing.Size(38, 20);
             this.LblNombreRam.TabIndex = 22;
             this.LblNombreRam.Text = "RAM";
             this.LblNombreRam.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -269,9 +276,10 @@
             // LblPorCPU
             // 
             this.LblPorCPU.AutoSize = true;
-            this.LblPorCPU.Location = new System.Drawing.Point(796, 103);
+            this.LblPorCPU.Location = new System.Drawing.Point(1061, 127);
+            this.LblPorCPU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPorCPU.Name = "LblPorCPU";
-            this.LblPorCPU.Size = new System.Drawing.Size(31, 19);
+            this.LblPorCPU.Size = new System.Drawing.Size(33, 20);
             this.LblPorCPU.TabIndex = 24;
             this.LblPorCPU.Text = "0 %";
             this.LblPorCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -280,9 +288,10 @@
             // LblPorRAM
             // 
             this.LblPorRAM.AutoSize = true;
-            this.LblPorRAM.Location = new System.Drawing.Point(796, 143);
+            this.LblPorRAM.Location = new System.Drawing.Point(1061, 176);
+            this.LblPorRAM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPorRAM.Name = "LblPorRAM";
-            this.LblPorRAM.Size = new System.Drawing.Size(31, 19);
+            this.LblPorRAM.Size = new System.Drawing.Size(33, 20);
             this.LblPorRAM.TabIndex = 25;
             this.LblPorRAM.Text = "0 %";
             this.LblPorRAM.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -294,56 +303,58 @@
             this.Grafico.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.Grafico.BorderSkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.Grafico.BorderSkin.PageColor = System.Drawing.Color.Black;
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.Grafico.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Grafico.Legends.Add(legend2);
-            this.Grafico.Location = new System.Drawing.Point(248, 191);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.Grafico.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Grafico.Legends.Add(legend1);
+            this.Grafico.Location = new System.Drawing.Point(331, 235);
+            this.Grafico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Grafico.Name = "Grafico";
             this.Grafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            series3.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.Name = "CPU";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Font = new System.Drawing.Font("Verdana", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            series4.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "RAM";
-            this.Grafico.Series.Add(series3);
-            this.Grafico.Series.Add(series4);
-            this.Grafico.Size = new System.Drawing.Size(704, 198);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "CPU";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Font = new System.Drawing.Font("Verdana", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "RAM";
+            this.Grafico.Series.Add(series1);
+            this.Grafico.Series.Add(series2);
+            this.Grafico.Size = new System.Drawing.Size(939, 244);
             this.Grafico.TabIndex = 26;
             this.Grafico.Visible = false;
+            this.Grafico.Click += new System.EventHandler(this.Grafico_Click);
             // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 424);
+            this.ClientSize = new System.Drawing.Size(1300, 522);
             this.Controls.Add(this.Grafico);
             this.Controls.Add(this.LblPorRAM);
             this.Controls.Add(this.LblPorCPU);
@@ -354,8 +365,10 @@
             this.Controls.Add(this.dgv_Proceso);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "ADMINISTRADOR DE PROCESOS GRUPO #4";
